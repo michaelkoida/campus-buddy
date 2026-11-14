@@ -46,3 +46,12 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+# Prevent heavy build caches and secrets from uploading
+/build/
+.dart_tool/
+functions/node_modules/
+firebase_options.dart
+google-services.json
+git remote add origin https://github.com/michaelkoida/campus-buddy-rcub.git
+git branch -M main
+git push -u origin mainGoogleService-Info.plist
