@@ -1,0 +1,55 @@
+Act as a Principal Mobile Software Engineer and cross-platform systems architect. Generate a production-ready, error-free multi-tenant mobile application workspace named "Campus Buddy (RCUB)" using Flutter (Dart) and a Google Firebase cloud backend infrastructure. The system must be meticulously optimized to run fluidly on low-end 2GB RAM Android and iOS devices by offloading active runtime memory objects into compressed local JSON string formats.
+
+Enforce the following twelve (12) hyper-local architectural specifications and feature workflows:
+
+1. GLOBAL STATE INITIALIZATION & BRANDING:
+- Sits in 'lib/main.dart'. Must call 'WidgetsFlutterBinding.ensureInitialized()' and 'await Firebase.initializeApp()' before booting the main app tree. 
+- Implement a global theme state tracking an optimization-grade Carbon Dark Mode palette (scaffold background color: 0xFF121212) to reduce CPU/GPU rendering overhead on 2GB RAM devices.
+
+2. 1.5-SECOND QUICK SPLASH SCREEN LAUNCH ROUTINE:
+- The initial home landing page route must point to 'CampusBuddySplashScreen'. 
+- On initialization, it must immediately execute an automated backend storage garbage collection procedure, hold a square app icon graphic asset ('assets/app_logo.png') centered on screen for exactly 1500 milliseconds, and then execute 'Navigator.pushReplacement()' straight to the secure authentication gate to ensure the loading screen is wiped from the navigation stack.
+
+3. AUTOMATIC WATERMARK GRAPHIC BACKGROUND WRAPPER:
+- Create a reusable widget named 'CampusBackgroundWrapper'. It must wrap all primary app screens.
+- It must layer a full-color university crest asset ('assets/rsu_logo.png') inside an 'Opacity' widget set strictly to '0.04' (4% opacity). This must automatically turn any imported image asset into a faint background watermark on compile without requiring manual photo editing, keeping screen text perfectly crisp and scannable.
+
+4. DYNAMIC SELECTOR AUTH GATEWAY & EXPLICIT SUB-TEXT WARNING:
+- Create a tabbed login/signup screen split between "Student Login (Signup)" and "Business Account Signup".
+- Student profiles must generate a structured unique identifier matching the format 'R-CB-XXXXX'. 
+- When switching to the external "Business Account Signup" tab, the layout must display a sticky, bordered amber warning box with this exact verbatim sub-text: "💡 Notice: If you are a student with a business on campus, signup with a student account so you can set up your store in the correct faculty/department category."
+
+5. 5-TICK consensus auto-healing timetable loop:
+- Students can submit crowdsourced lecture schedule updates (Course Code, Lecturer, Venue, Time Slot).
+- Incoming crowd submissions are marked 'isApproved = false' initially and held in a review state. 
+- If 5 separate independent student accounts view the pending item and tap a "Tick Correct" validation button, the engine increments its 'confirmationCount' variable. Once it hits a target count of 5, the model auto-heals, flips 'isApproved = true', and instantly promotes the item to the live global timetable schedule.
+
+6. 100L FRESHMAN SURVIVAL GUIDE PANEL:
+- Implement an expandable drop-down tracking list layout ('FreshmanGuideItem') on the main dashboard tab.
+- This panel must utilize strict layout rules that gate its visibility: it must render and slide onto the interface ONLY if the logged-in student user profile data reads 'level == 100', keeping the screen completely clean for upper-level students.
+
+7. RSU 5-POINT INDEX CGPA CALCULATOR:
+- Build an academic strategic computation tool inside the study view panel modeled strictly on the university's 5.0 index scale.
+- It must map grades ('A'=5, 'B'=4, 'C'=3, 'D'=2, 'F'=0), multiply points by individual course unit weight structures, and output a precise, double-precision semester GPA calculation log.
+
+8. RECONFIGURED WHATSAPP-STYLE COMMUNITY GROUP CHAT:
+- Completely convert the primary chatbot page into an open community chat viewport where users from any level or faculty can send real-time text packets visible to everyone, utilizing their unique generated handle usernames.
+
+9. SPECIFIC BUBBLE FLOATING AI BOT PLACEMENT:
+- Inside the new Group Chat page, nest a persistent, circular, cyan-colored floating action button containing an open circle icon ('Icons.circle_outlined') in the bottom-right corner—matching exactly where Meta AI sits inside the WhatsApp interface tab—to trigger background queries to the local landmark scraper engine.
+
+10. CAMPUS SHOPPING COMPLEX MARKETPLACE WITH STICKY ANTI-FRAUD SHIELDS:
+- Expand the food matching page into a multi-category campus storefront square ("Food", "Books", "Gadgets", "Pharmacy", "CyberCafe").
+- The page must be locked from manual data alterations: standard student profiles cannot manually modify their registered departments or faculties.
+- At the very top of the market screen, bake in a mandatory, bright red warning banner with a warning icon that reads this exact text verbatim: "⚠️ WARNING: Do not pay any student seller before receiving your goods!". This shield is hardcoded to eliminate transaction debt fraud.
+
+11. GOOGLE PLAY & APPLE STORE UGC SAFETY COMPLIANCE MECHANISMS:
+- To satisfy strict store policies regarding User-Generated Content (UGC), inject an inline flag icon button ('Icons.report_problem') next to every multi-user message tile.
+- Tapping this button must open a confirmation dialog. Confirming must instantly append the malicious sender's username string into a local device array ('_locallyBlockedUsersList') and remove the message from the phone's layout.
+- Simultaneously, it must log a permanent compliance ticket containing the offending user handle and the reported text string into a global administration review stream ('globalAdminFlaggedChatTicketsQueue') inside the red Admin Panel Screen, granting the App Owner absolute power to ban the bad actor globally.
+
+12. 1,500-WORD / 20-MEDIA PAYSTACK MONETIZATION CAP GATES:
+- Implement an infrastructure protection framework to guard your beginner Firebase account from database resource depletion. Free tier users are hard-capped to a lifetime allocation of 1,500 words sent and 20 media file attachments.
+- Track usage via an inline tracker strip at the top of the chat view displaying 'Words: X/1500' and 'Media: Y/20'.
+- If a free user attempts to cross either cap, the app must freeze input execution, intercept the data request, and open an automated checkout dialog prompt.
+- Integrate your live verified production public key token ('pk_live_8df0473534fb813c5c1f7c5d34cd5bf6d0fdf5ae') and map separate payment page web links directly to the action button click events: if a standard student triggers it, route their phone browser to the Chat Extend plan page ('https://paystack.shop'). If an external business operator triggers it to unlock marketplace shop creation, route them to the specialized 3-Month Recurring Merchant license plan page ('https://paystack.shop').
